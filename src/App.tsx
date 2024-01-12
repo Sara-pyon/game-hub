@@ -6,7 +6,7 @@ import { useState } from 'react'
 import PlatformSelector from './components/PlatformSelector'
 import SortSelector from './components/SortSelector'
 import GameHeading from './components/GameHeading'
-import { Platform } from './hooks/usePlatforms'
+
 
 export interface GameQuery{
   genreId?: number;
