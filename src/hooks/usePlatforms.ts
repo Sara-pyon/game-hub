@@ -13,12 +13,10 @@ const usePlatforms = () => useQuery({
     queryKey: ['platforms'],
     queryFn: () => apiClient.get<FetchResponse<Platform>>('/platforms')
                             .then(res => res.data),
-    staleTime: ms('24h'),
+    staleTime: 1*60*60*1000,
     initialData: {count: platforms.length, results: platforms}
 });
 
 export default usePlatforms;
-function ms(arg0: string): number | undefined {
-    throw new Error('Function not implemented.');
-}
+
 
