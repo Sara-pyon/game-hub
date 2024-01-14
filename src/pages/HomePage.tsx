@@ -6,6 +6,8 @@ import PlatformSelector from '../components/PlatformSelector'
 import SortSelector from '../components/SortSelector'
 
 const HomePage = () => {
+    // throw new Error ('something wrong');
+
   return (
     <Grid templateAreas={{
     base: `"main"`,
