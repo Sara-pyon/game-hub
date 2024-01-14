@@ -4,6 +4,7 @@ import PlatformIconList from './PlatformIconList';
 import CriticScore from './CriticScore';
 import getCroppedImageUrl from '../services/image-url';
 import Emoji from './Emoji';
+import { Link } from 'react-router-dom';
 
 interface Props{
     game: Game;
@@ -12,6 +13,7 @@ interface Props{
 const GameCard = ({ game }: Props) => {
   return (
     <Card>
+      <Link to={'games/' + game.slug}>
         <Image src={ getCroppedImageUrl(game.background_image)}
           objectFit='cover'/>
         <CardBody>
@@ -23,6 +25,7 @@ const GameCard = ({ game }: Props) => {
               {game.name}<Emoji rating={game.rating_top} />
             </Heading>
         </CardBody>
+        </Link>
     </Card>
   )
 }
