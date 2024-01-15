@@ -3,6 +3,7 @@ import APIClient from "../services/api-client";
 import { ScreenShot } from "../entities/screenshot";
 
 
+
 const useScreenShots = (gameId:number) => {
     const apiClient = new APIClient<ScreenShot>(`/games/${gameId}/screenshots`);
 
